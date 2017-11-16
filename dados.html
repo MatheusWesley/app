@@ -1,0 +1,82 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- <link rel="icon" href="imgs/avicon.ico"> -->
+
+  <title>Dados</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Requerindo o jQuery -->
+  <script>
+    window.$ = window.jQuery = require('jquery');
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Nome do Projeto -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">SisCadastro</a>
+      </div>
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">- Menu - <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Cadastrar-se</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Sobre o Programa</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+    <br><br><br>
+    <div class="row">
+      <table class="table table-hover">
+        <thead>
+          <tr >
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="tbl_cadastro in cadastro">
+            <td>{{tbl_cadastro.nome}}</td>
+            <td>{{tbl_cadastro.email}}</td>
+            <td>{{tbl_cadastro.senha}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- /container -->
+    <footer><a href="index.html">
+      <button type="button" class="btn btn-danger">Voltar</button>
+    </a>
+    </footer>
+    <!-- Adicionando Scripts na pagina -->
+    <script>
+        require('./conf/index.js');
+        require('./conf/dados.js');
+      </script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
