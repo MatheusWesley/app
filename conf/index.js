@@ -1,4 +1,5 @@
 var loki = require('lokijs');
+
 var lokiIndexedAdapter = require('./../node_modules/lokijs/src/loki-indexed-adapter.js');
 
 // CRIANDO BANCO DE DADOS
