@@ -23,11 +23,9 @@ new Vue({
       vSenha = $("#vSenha").val();
       //result = tbl_cadastro.find({'nome': { '$eq' : vNome }} && {'senha': { '$eq' : vSenha }});
       if (tbl_cadastro.find({'nome': { '$eq' : vNome }}) == false) {
-        console.log('Nome: ' + vNome);
-        console.log('Usuario errado');
+        alert('Usuario '+ vNome +' digitado está incorreto');
       } else if (tbl_cadastro.find({'senha': { '$eq' : vSenha }}) == false) {
-          console.log('Senha: ' + vSenha);
-          console.log('Senha errada');
+          alert('Senha digitada está incorreta');
       }else{
           console.log('Nome: ' + vNome);
           console.log('Senha: ' + vSenha);
